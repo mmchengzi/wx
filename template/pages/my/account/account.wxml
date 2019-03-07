@@ -1,0 +1,83 @@
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 帐号
+    </navigator>
+  </view>
+</view>
+
+<form>
+<view class="cu-form-group margin-top">
+    <view class='title'>实名状态</view>
+    <input placeholder="已实名" class='radius' name='input'></input>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class='title'>帐号昵称</view>
+    <input placeholder="两字短标题" class='radius' name='input'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>帐号ID</view>
+    <input placeholder="三字标题" class='radius' name='input'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>签名</view>
+    <input placeholder="统一标题的宽度" class='radius' name='input'></input>
+  </view>
+    <view class="cu-form-group">
+    <view class='title'>电话</view>
+    <input placeholder="输入框带个按钮" class='radius' name='input'></input>
+    <button class='cu-btn bg-green shadow'>验证码</button>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>邮箱</view>
+    <input placeholder="输入框带个按钮" class='radius' name='input'></input>
+    <button class='cu-btn bg-green shadow'>验证码</button>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>QQ</view>
+    <input placeholder="输入框带标签" class='radius' name='input'></input>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>微信</view>
+    <input placeholder="输入框带标签" class='radius' name='input'></input>
+  </view>
+
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>性别</view>
+    <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{index?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group ">
+    <view class='title'>行业信息</view>
+    <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{index?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>生日</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class='title'>所在地</view>
+    <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="cu-form-group margin-top" wx:hide="{{modalName==null}}">
+    <textarea placeholder="个人说明" maxlength="-1" disabled="{{modalName!=null}}" placeholder-class='placeholder'></textarea>
+  </view>
+          <button class="weui-btn margin-top " style='color:red;background-color:#fff' type="default" disabled="true" >退出登录</button>
+</form>
