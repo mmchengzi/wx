@@ -10,7 +10,8 @@
     "pages/my/order/order",
     "pages/my/account/account",
     "pages/find/article/article",
-    "pages/my/order/detail/detail"
+    "pages/my/order/detail/detail",
+    "pages/auth/auth"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

@@ -70,7 +70,7 @@ Component({
         success: res => {
           if (!res.authSetting['scope.userInfo']) {
             wx.redirectTo({
-              url: '/pages/index/index'
+              url: '/pages/auth/auth'
             })
           }
         }
