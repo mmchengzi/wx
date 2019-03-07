@@ -1,17 +1,17 @@
 <view class="cu-custom" style="height:{{CustomBar}}px;">
-  <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
-    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <text class='icon-back'></text> 列表
-    </navigator>
+  <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg);">
+    <view class='content' style='top:{{StatusBar}}px;'>
+      发现
+    </view>
   </view>
 </view>
 
 
 <view class="cu-list menu solid-bottom margin-top">
- <view class="cu-item arrow">
+  <view class="cu-item arrow">
     <navigator class='content' url='friendshare/friendshare' hover-class='none'>
       <text class='icon-formfill text-green'></text>
-      <text class='text-grey'>账单</text>
+      <text class='text-grey'>朋友圈</text>
     </navigator>
   </view>
 
@@ -21,33 +21,33 @@
 
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
-    <text class='icon-title text-orange '></text> 消息列表
+    <text class='icon-title text-orange '></text> 最近活动
   </view>
 </view>
 <view class="cu-list menu menu-avatar">
   <view class="cu-item">
     <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);"></view>
-    <view class='content'>
+
+    <navigator class='content' url='article/article' hover-class='none'>
       <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
         <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class="cu-tag round bg-grey sm">5</view>
     </view>
   </view>
+
   <view class="cu-item">
     <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);">
       <view class="cu-tag badge">99+</view>
     </view>
-    <view class='content'>
-      <view class='text-grey'>文晓港
-        <view class="cu-tag round bg-orange sm">SVIP</view>
-      </view>
+     <navigator class='content' url='article/article' hover-class='none'>
+     <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
-        <text class='icon-redpacket_fill text-red'></text> 收到红包</view>
-    </view>
+        <text class='icon-infofill text-red'></text> 消息未送达</view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class='icon-notice_forbid_fill text-gray'></view>
@@ -55,11 +55,11 @@
   </view>
   <view class="cu-item ">
     <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
-    <view class='content'>
-      <view>喵星人互动群</view>
+    <navigator class='content' url='article/article' hover-class='none'>
+     <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
-        喵星酱：喵喵喵！</view>
-    </view>
+        <text class='icon-infofill text-red'></text> 消息未送达</view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class="cu-tag round bg-red sm">5</view>
@@ -67,11 +67,11 @@
   </view>
   <view class="cu-item grayscale">
     <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
-    <view class='content'>
-      <view>喵星人互动群</view>
+   <navigator class='content' url='article/article' hover-class='none'>
+     <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
-        喵星酱：喵喵喵！</view>
-    </view>
+        <text class='icon-infofill text-red'></text> 消息未送达</view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class="cu-tag round bg-red sm">5</view>
@@ -81,19 +81,14 @@
     <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);">
       <view class="cu-tag badge"></view>
     </view>
-    <view class='content'>
-      <view>喵星人互动群
-        <view class="cu-tag round bg-orange sm">6人</view>
-      </view>
+    <navigator class='content' url='article/article' hover-class='none'>
+     <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
-        喵星酱：
-        <text class='icon-picfill text-orange'></text> 图片传输中...</view>
-    </view>
+        <text class='icon-infofill text-red'></text> 消息未送达</view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class='icon-notice_forbid_fill text-gray'></view>
     </view>
   </view>
 </view>
-
-

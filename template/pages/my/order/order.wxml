@@ -6,14 +6,14 @@
   </view>
 </view>
 
- <view class="cu-form-group">
-    <view class='title'>日期选择</view>
-    <picker mode="date" value="{{date}}" fields="month"   start="2015-09" end="2020-09" bindchange="DateChange">
-      <view class="picker">
-        {{date}}
-      </view>
-    </picker>
-  </view>
+<view class="cu-form-group">
+  <view class='title'>日期选择</view>
+  <picker mode="date" value="{{date}}" fields="month" start="2015-09" end="2020-09" bindchange="DateChange">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+</view>
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='icon-title text-orange '></text> 全部订单
@@ -22,11 +22,11 @@
 <view class="cu-list menu menu-avatar">
   <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart='ListTouchStart' bindtouchmove='ListTouchMove' bindtouchend='ListTouchEnd' data-target="move-box-{{index}}">
     <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-{{index+1}}.jpg);"></view>
-    <view class='content'>
+    <navigator class='content' url='detail/detail' hover-class='none'>
       <view class='text-grey'>文晓港</view>
       <view class='text-gray text-sm'>
         <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </view>
+    </navigator>
     <view class='action'>
       <view class='text-grey text-xs'>22:20</view>
       <view class="cu-tag round bg-grey sm">5</view>

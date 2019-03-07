@@ -8,7 +8,9 @@
     "pages/my/bill/bill",
     "pages/my/balance/balance",
     "pages/my/order/order",
-    "pages/my/account/account"
+    "pages/my/account/account",
+    "pages/find/article/article",
+    "pages/my/order/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

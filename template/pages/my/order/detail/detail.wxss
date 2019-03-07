@@ -1,0 +1,4 @@
+@import '../../../../style/weui';
+.weui-form-preview{
+    margin-bottom: 25px;
+}
