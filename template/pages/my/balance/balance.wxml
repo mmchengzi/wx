@@ -1,0 +1,25 @@
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 余额
+    </navigator>
+  </view>
+</view>
+<view class='solids-bottom padding-xs flex align-center'>
+  <view class='flex-sub text-center'>
+    <view class='solid-bottom text-xxl padding'>
+      <text class='text-price text-red'>88888888.00</text>
+    </view>
+  </view>
+</view>
+<form>
+  <view class="cu-form-group margin-top ">
+    <view class='title'>输入金额</view>
+    <input placeholder="￥" class='radius' type='digit' bindconfirm name='input'></input>
+  </view>
+</form>
+<view class="padding flex flex-direction">
+  <button class='cu-btn bg-grey lg'>充值</button>
+  
+  <button class='cu-btn bg-red margin-tb-sm lg'>提现</button>
+</view>

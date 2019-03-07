@@ -1,0 +1,26 @@
+.page {
+  background: #f1f1f1;
+}
+
+.switch-sex::after {
+  content: "\e716";
+}
+
+.switch-sex::before {
+  content: "\e7a9";
+}
+
+.switch-music::after {
+  content: "\e66a";
+}
+
+.switch-music::before {
+  content: "\e6db";
+}
+.cu-list.menu-avatar>.cu-item {
+  padding-left: 140rpx;
+  height: 200rpx;
+}
+.cu-list.menu>.cu-item {
+  align-items: center;
+}
