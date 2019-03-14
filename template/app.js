@@ -6,23 +6,55 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (res.code) {
-          // 发起网络请求
-          wx.request({
-            url: 'https://test.com/onLogin',
-            data: {
-              code: res.code
-            }
+    const token = wx.getStorageSync('token');
+    if (token) {
+      wx.checkSession({
+        success: function() {
+          wx.redirectTo({
+            url: '/pages/index/index'
           })
-        } else {
-          console.log('登录失败！' + res.errMsg)
+        },
+        fail: function() {
+          login()
         }
-      }
-    })
+      })
+    } else {
+      login()
+    }
+
+    function login() {
+      // 登录
+      wx.login({
+        success: res => {
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+          if (res.code) {
+            // 发起网络请求
+            wx.request({
+              url: 'http://localhost:8085/user/wxlogin',
+              data: {
+                code: res.code
+              },
+              success(res) {
+                if (res.data.code == "200") {
+                  wx.setStorageSync('token', res.data.data)
+                  wx.redirectTo({
+                    url: '/pages/index/index'
+                  })
+                } else {
+                  console.log("获取token失败！")
+                  wx.redirectTo({
+                    url: '/pages/autu/autu'
+                  })
+                }
+
+              }
+            })
+          } else {
+            console.log('登录失败！' + res.errMsg)
+          }
+        }
+      })
+    }
     // 获取用户信息
     wx.getSetting({
       success: res => {

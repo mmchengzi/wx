@@ -11,7 +11,8 @@
     "pages/my/account/account",
     "pages/find/article/article",
     "pages/my/order/detail/detail",
-    "pages/auth/auth"
+    "pages/auth/auth",
+    "pages/test/test"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",
