@@ -30,13 +30,15 @@ App({
           if (res.code) {
             // 发起网络请求
             wx.request({
-              url: 'http://localhost:8085/user/wxlogin',
+              url: 'http://masterchengzi.com:8083/travel-server/user/wxlogin',
               data: {
                 code: res.code
               },
               success(res) {
                 if (res.data.code == "200") {
-                  wx.setStorageSync('token', res.data.data)
+                  let result = JSON.parse(res.data.data);
+                  wx.setStorageSync('token', result.token)
+                  wx.setStorageSync('openid', result.openid)
                   wx.redirectTo({
                     url: '/pages/index/index'
                   })
@@ -86,6 +88,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    encryptedData: null,
+    iv: null,
+    bastUrl: 'http://masterchengzi.com:8083/travel-server/'
+    //bastUrl: 'http://localhost:8085/'
+  } 
 })

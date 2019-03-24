@@ -1,3 +1,4 @@
+<wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 <view class="cu-custom" style="height:{{CustomBar}}px;">
   <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg);">
     <view class='content' style='top:{{StatusBar}}px;'>
@@ -25,70 +26,15 @@
   </view>
 </view>
 <view class="cu-list menu menu-avatar">
-  <view class="cu-item">
+  <view class="cu-item" bindtap='godetail' data-item='{{item}}' open-type="navigate" wx:for="{{itemList}}" wx:key>
     <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);"></view>
 
-    <navigator class='content' url='article/article' hover-class='none'>
-      <view class='text-grey'>文晓港</view>
-      <view class='text-gray text-sm'>
-        <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </navigator>
+    <view class='content' hover-class='none'>
+      <view class='text-grey'>{{item.itemName}}</view>
+    </view>
     <view class='action'>
-      <view class='text-grey text-xs'>22:20</view>
-      <view class="cu-tag round bg-grey sm">5</view>
+      <view class='text-grey text-xs'>{{item.creatTime}}</view>
     </view>
   </view>
 
-  <view class="cu-item">
-    <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);">
-      <view class="cu-tag badge">99+</view>
-    </view>
-     <navigator class='content' url='article/article' hover-class='none'>
-     <view class='text-grey'>文晓港</view>
-      <view class='text-gray text-sm'>
-        <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </navigator>
-    <view class='action'>
-      <view class='text-grey text-xs'>22:20</view>
-      <view class='icon-notice_forbid_fill text-gray'></view>
-    </view>
-  </view>
-  <view class="cu-item ">
-    <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
-    <navigator class='content' url='article/article' hover-class='none'>
-     <view class='text-grey'>文晓港</view>
-      <view class='text-gray text-sm'>
-        <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </navigator>
-    <view class='action'>
-      <view class='text-grey text-xs'>22:20</view>
-      <view class="cu-tag round bg-red sm">5</view>
-    </view>
-  </view>
-  <view class="cu-item grayscale">
-    <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
-   <navigator class='content' url='article/article' hover-class='none'>
-     <view class='text-grey'>文晓港</view>
-      <view class='text-gray text-sm'>
-        <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </navigator>
-    <view class='action'>
-      <view class='text-grey text-xs'>22:20</view>
-      <view class="cu-tag round bg-red sm">5</view>
-    </view>
-  </view>
-  <view class="cu-item cur">
-    <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);">
-      <view class="cu-tag badge"></view>
-    </view>
-    <navigator class='content' url='article/article' hover-class='none'>
-     <view class='text-grey'>文晓港</view>
-      <view class='text-gray text-sm'>
-        <text class='icon-infofill text-red'></text> 消息未送达</view>
-    </navigator>
-    <view class='action'>
-      <view class='text-grey text-xs'>22:20</view>
-      <view class='icon-notice_forbid_fill text-gray'></view>
-    </view>
-  </view>
 </view>

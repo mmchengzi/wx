@@ -4,7 +4,7 @@
     <text class='text-df'>v2.0</text>
   </view>
   <view class='margin-top-sm'>
-    <text>By:文晓港</text>
+    <text><open-data type="userNickName" lang="zh_CN"></open-data> </text>
   </view>
 </view>
 <view class='padding-xl'>
